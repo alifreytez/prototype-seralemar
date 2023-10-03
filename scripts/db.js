@@ -25,6 +25,108 @@ DB.data = {
             "Femenino"
         ]
     },
+    "states": [
+        {
+            "id": "0",
+            "state_name": "Amazonas"
+        },
+        {
+            "id": "1",
+            "state_name": "Anzoategui"
+        },
+        {
+            "id": "2",
+            "state_name": "Apure"
+        },
+        {
+            "id": "3",
+            "state_name": "Aragua"
+        },
+        {
+            "id": "4",
+            "state_name": "Barinas"
+        },
+        {
+            "id": "5",
+            "state_name": "Bolívar"
+        },
+        {
+            "id": "6",
+            "state_name": "Carabobo"
+        },
+        {
+            "id": "7",
+            "state_name": "Cojedes"
+        },
+        {
+            "id": "8",
+            "state_name": "Delta Amacuro"
+        },
+        {
+            "id": "9",
+            "state_name": "Falcón"
+        },
+        {
+            "id": "10",
+            "state_name": "Guárico"
+        },
+        {
+            "id": "11",
+            "state_name": "Lara"
+        },
+        {
+            "id": "12",
+            "state_name": "Mérida"
+        },
+        {
+            "id": "13",
+            "state_name": "Miranda"
+        },
+        {
+            "id": "14",
+            "state_name": "Monagas"
+        },
+        {
+            "id": "15",
+            "state_name": "Nueva Esparta"
+        },
+        {
+            "id": "16",
+            "state_name": "Portuguesa"
+        },
+        {
+            "id": "17",
+            "state_name": "Sucre"
+        },
+        {
+            "id": "18",
+            "state_name": "Táchira"
+        },
+        {
+            "id": "19",
+            "state_name": "Trujillo"
+        },
+        {
+            "id": "20",
+            "state_name": "Yaracuy"
+        },
+        {
+            "id": "21",
+            "state_name": "Zulia"
+        },
+        {
+            "id": "22",
+            "state_name": "Dependencias Federales"
+        },
+        {
+            "id": "23",
+            "state_name": "Distrito Federal"
+        },
+        {
+            "id": "24",
+            "state_name": "Vargas"
+        }
+    ],
     "collection_tables": [
         {
             "invoice_number": "FAC006291",
