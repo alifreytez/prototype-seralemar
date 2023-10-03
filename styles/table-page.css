@@ -1,0 +1,181 @@
+.content {
+    position: relative
+}
+.content-header {
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+}
+h1 {
+    font-size: var(--title-fze);
+}
+
+.content-header-form {
+    justify-content: space-between;
+    align-items: center;
+}
+.content-header-form-option {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 10px;
+    width: 180px;
+}
+.content-header-form-option:not(:first-child) {
+    margin-left: 15px;
+}
+.content-header-form-option input {
+    border: 2px solid var(--gray-color);
+    border-radius: 10px;
+    color: var(--letter-color);
+    font-size: var(--normal-fze);
+    display: block;
+    padding: 5px 10px;
+    outline: none;
+    width: 100%;
+    transition: all var(--g-time) ease;
+}
+.content-header-form-option input:focus {
+    border-color: var(--letter-color);
+}
+.content-header-form-option label {
+    display: block;
+    font-size: var(--short-fze);
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.table-wrapper {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 25px;
+}
+.table-wrapper-in {
+    overflow-x: auto;
+    width: 100%;
+}
+.table-wrapper-in table {
+    width: 100%;
+    border-spacing: 0;
+}
+.table-wrapper-in th,
+.table-wrapper-in td,
+.table-wrapper-in p {
+    padding: 15px;
+    font-size: var(--normal-fze);
+    color: var(--letter-color);
+}
+.table-wrapper-in th {
+    background-color: var(--gray-color);
+    text-align: left;
+}
+.table-wrapper-in th:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.table-wrapper-in th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.table-wrapper-in table td:last-child {
+    justify-content: space-around;
+}
+.table-wrapper-in table button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: color var(--g-time) ease;
+}
+.table-wrapper-in table tbody td:last-child button:last-child {
+    margin-left: 10px;
+}
+.table-wrapper-in table button:hover {
+    color: var(--p-color);
+
+}
+
+.mayor-options {
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+.seller.mayor-options {
+    justify-content: center;
+}
+.mayor-options .table-options {
+    margin-left: 15px;
+}
+.mayor-options .table-options button {
+    background-color: var(--white-color);
+    border: none;
+    border-radius: 10px;
+    display: block;
+    font-size: var(--subtitle-fze);
+    padding: 15px;
+    outline: none;
+    width: 60px;
+    text-align: center;
+    transition: all var(--g-time) ease;
+}
+.mayor-options .table-options button:not([id="delete-all-rows"]):hover {
+    background-color: var(--p-color);
+    color: var(--white-color);
+}
+.mayor-options .table-options button:not(:first-child) {
+    margin-left: 15px;
+}
+.mayor-options .table-options button[id="delete-all-rows"] {
+    background-color: var(--alert-color);
+}
+.mayor-options .table-options button[id="delete-all-rows"]:hover {
+    color: var(--white-color);
+}
+
+@media (max-width: 900px) {
+    h1,
+    .content-header-form {
+        width: 100%;
+    }
+    h1 {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .content-header-form {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+    }
+
+    .content-header-form-option {
+        width: auto;
+        margin-left: 0 !important;
+    }
+}
+@media (max-width: 750px) {
+    .content-header-form {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 670px) {
+    .pagination {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    .mayor-options .table-options {
+        margin-top: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .content {
+        padding: 30px;
+    }
+}
+@media (max-width: 400px) {
+    .content {
+        padding: 20px;
+    }
+}

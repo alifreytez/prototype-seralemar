@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/css/fontawesome.css">
+    <link rel="stylesheet" href="styles/css/brands.css">
+    <link rel="stylesheet" href="styles/css/solid.css">
+    <link rel="stylesheet" href="styles/css/regular.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/table-page.css">
+    <link rel="stylesheet" href="styles/users.css">
+    <link rel="stylesheet" href="styles/floating-message.css">
+    <link rel="stylesheet" href="styles/pagination-buttons.css">
+    <link rel="stylesheet" href="styles/management-form.css">
+    <!-- Scripts -->
+    <script src="scripts/general.js" type="module"></script>
+    <script src="scripts/users.js" type="module"></script>
+    <title>UCLA Prototype | Usuarios</title>
+</head>
+<body>
+    <header>
+        <div class="page-header-wrapper flex-wrap">
+            <div class="btn-open-menu-wrapper flex-wrap"><button type="button" id="btn-open-menu"><i class="fa-solid fa-bars"></i></button></div>
+            <div class="page-header-options-wrapper flex-wrap">
+                <div class="btn-notification-wrapper">
+                    <button type="button" id="btn-open-close-notification" class="btn-notification"><i class="fa-solid fa-bell"></i></button>
+                    <div id="notification-wrapper" class="notification-wrapper"></div>
+                </div>
+                <div class="user-options-wrapper flex-wrap">
+                    <button type="button" id="btn-perfil"><i class="fa-solid fa-circle-user"></i></button>
+                    <p><span id="user-name" class="user-name"></span><span id="user-role" class="user-role"></span></p>
+                    <a href="logout.html" id="btn-logout" class="flex-wrap btn-logout"><i class="fa-solid fa-sign-out"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="flex-wrap">
+        <nav id="nav-menu" class="page-nav flex-wrap hide"></nav>
+        <section id="content" class="content">
+            <div class="flex-wrap content-header">
+                <h1>Usuarios</h1>
+                <form id="content-header-form" class="flex-wrap content-header-form">
+                    <div class="content-header-form-option">
+                        <label for="filter-keyword">Por palabra clave</label>
+                        <input type="text" id="filter-keyword" name="filter-keyword" placeholder="Escribe algo">
+                    </div>
+                    <div class="content-header-form-option">
+                        <label for="filter-sex">Por sexo</label>
+                        <div id="select-filter-sex" data-select-id="filter-sex" class="advanced-select">
+                            <div class="flex-wrap option-text-wrapper">
+                                <span class="option-text"></span>
+                                <span class="option-menu-btn flex-wrap"><i class="fa-solid fa-angle-down"></i></span>
+                            </div>
+                            <ul class="menu"></ul>
+                        </div>
+                        <select name="filter-sex" id="filter-sex" data-object-id="select-filter-sex"></select>
+                    </div>
+                    <div class="content-header-form-option">
+                        <label for="filter-position">Por cargo</label>
+                        <div id="select-filter-position" data-select-id="filter-position" class="advanced-select">
+                            <div class="flex-wrap option-text-wrapper">
+                                <span class="option-text"></span>
+                                <span class="option-menu-btn flex-wrap"><i class="fa-solid fa-angle-down"></i></span>
+                            </div>
+                            <ul class="menu"></ul>
+                        </div>
+                        <select name="filter-position" id="filter-position" data-object-id="select-filter-position"></select>
+                    </div>
+                </form>
+            </div>
+            <div class="table-wrapper">
+                <div class="table-wrapper-in">
+                    <table id="users-table">
+                        <thead>
+                            <tr>
+                                <th><button type="button" id="select-all-rows" class="btn-select-all-rows" data-selected="0"><i class="fa-regular fa-square"></i></button></th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Cédula</th>
+                                <th>Nro teléfónico</th>
+                                <th>Dirección E-Mail</th>
+                                <th>Sexo</th>
+                                <th>Cargo</th>
+                                <th>Fecha de ingreso</th>
+                                <th>Fecha de egreso</th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="mayor-options flex-wrap">
+                <div id="pagination" class="pagination"></div>
+                <div class="table-options flex-wrap">
+                    <button type="button" id="create-row"><i class="fa-solid fa-plus"></i></button>
+                    <button type="button" id="delete-all-rows"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+        </section>
+        <form id="management-form" class="management-form">
+            <button type="button" id="close-form" class="btn-close-form"><i class="fa-solid fa-x"></i>Cerrar</button>
+            <div class="management-wrapper">
+                <h2></h2>
+                <div class="inside-wrapper">
+                    <div class="box-doble flex-wrap names">
+                        <div class="box">
+                            <label for="">Nombre</label>
+                            <input type="text" name="name" placeholder="Ej.: John">
+                        </div>
+                        <div class="box">
+                            <label for="">Apellido</label>
+                            <input type="text" name="surname" placeholder="Ej.: Doe">
+                        </div>
+                    </div>
+                    <div class="box-doble flex-wrap">
+                        <div class="box">
+                            <label for="">Cédula</label>
+                            <input type="text" name="user-id" placeholder="Ej.: 00000000">
+                        </div>
+                        <div class="box">
+                            <label for="">Nro telefónico</label>
+                            <input type="text" name="phone-number" placeholder="Ej.: +584120000000">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label for="">Dirección E-Mail</label>
+                        <input type="text" name="email" placeholder="Ej.: johndoe@mail.domain">
+                    </div>
+                    <div class="box-doble flex-wrap">
+                        <div class="box">
+                            <label for="sex">Sexo</label>
+                            <div id="select-sex" data-select-id="sex" class="advanced-select">
+                                <div class="flex-wrap option-text-wrapper">
+                                    <span class="option-text"></span>
+                                    <span class="option-menu-btn flex-wrap"><i class="fa-solid fa-angle-down"></i></span>
+                                </div>
+                                <ul class="menu"></ul>
+                            </div>
+                            <select name="sex" id="sex" data-object-id="select-sex"></select>
+                        </div>
+                        <div class="box">
+                            <label for="position">Cargo</label>
+                            <div id="select-position" data-select-id="position" class="advanced-select">
+                                <div class="flex-wrap option-text-wrapper">
+                                    <span class="option-text"></span>
+                                    <span class="option-menu-btn flex-wrap"><i class="fa-solid fa-angle-down"></i></span>
+                                </div>
+                                <ul class="menu"></ul>
+                            </div>
+                            <select name="position" id="position" data-object-id="select-position"></select>
+                        </div>
+                    </div>
+                    <div class="box-doble flex-wrap">
+                        <div class="box">
+                            <label for="">Fecha de ingreso</label>
+                            <input type="date" name="entry-date">
+                        </div>
+                        <div class="box">
+                            <label for="">Fecha de egreso</label>
+                            <input type="date" name="exit-date">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label for="">Contraseña</label>
+                        <input type="text" name="password">
+                    </div>
+                    <div class="box flex-wrap options">
+                        <button type="submit" id="submit-form">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="modal-notification" class="modal-notification">
+            <button type="button" id="close-modal-notification" class="btn-close-form"><i class="fa-solid fa-x"></i>Cerrar</button>
+            <div class="modal-notification-wrapper">
+                <div class="modal-notification-wrapper-in">
+                    <div id="modal-notification-change-cc" class="modal-notification-change-cc"></div>
+                    <div id="modal-notification-reminder" class="modal-notification-reminder"></div>
+                </div>
+            </div>
+        </div>
+        <div id="floating-message"></div>
+    </main>
+    <footer></footer>
+</body>
+</html>

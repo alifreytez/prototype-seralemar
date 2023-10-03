@@ -1,0 +1,99 @@
+
+select {
+    display: none;
+}
+.advanced-select {
+    position: relative;
+}
+.advanced-select .option-text-wrapper {
+    align-items: center;
+    border: 2px solid var(--gray-color);
+    border-radius: 10px;
+    color: var(--letter-color);
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 5px 10px;
+    position: relative;
+    width: 100%;
+    transition: all var(--g-time) ease;
+}
+.advanced-select .option-text-wrapper.wrong {
+    border-color: var(--alert-color);
+}
+/* texto seleccionado */
+.advanced-select .option-text {
+    display: block;
+    line-height: inherit;
+    font-size: var(--normal-fze);
+    transition: all var(--g-time) ease;
+}
+.advanced-select .option-text-wrapper.wrong .option-text {
+    color: var(--alert-color);
+}
+/* flecha del boton */
+.advanced-select .option-menu-btn {
+    align-items: center;
+    background-color: rgba(255,255,255,.8);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: 6px;
+    height: 100%;
+    transform: translateY(-50%);
+    transition: all var(--g-time) ease;
+}
+.advanced-select .option-text-wrapper.wrong .option-menu-btn {
+    color: var(--alert-color);
+}
+.advanced-select .option-menu-btn i {
+    transition: all var(--g-time) ease;
+}
+.advanced-select .option-menu-btn.opened i {
+    transform: rotate(180deg);
+}
+/* menu */
+.advanced-select .menu {
+    background-color: var(--white-color);
+    border: 2px solid var(--gray-color);
+    border-radius: 10px;
+    display: none;
+    max-height: 150px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: opacity .5s ease;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 2;
+}    
+.advanced-select .menu.top-position {
+    bottom: calc(100% + 3px);
+}
+.advanced-select .menu.bottom-position {
+    top: calc(100% + 3px);
+}
+.advanced-select .menu.display {
+    display: block;
+}
+.advanced-select .menu.show {
+    opacity: 1;
+}
+/* li */
+.advanced-select li {
+    color: var(--letter-color);
+    cursor: pointer;
+    font-size: var(--normal-fze);
+    list-style: none;
+    padding: 10px;
+    transition: all var(--g-time) ease;
+}
+.advanced-select li:not(:last-child) {
+    border-bottom: 2px solid var(--gray-color);
+}
+.advanced-select li[data-selected=true],
+.advanced-select li:hover {
+    background-color: var(--p-color);
+    color: var(--white-color);
+}

@@ -1,0 +1,30 @@
+.floating-message {
+    background-color: var(--white-color);
+    border: 2px solid var(--gray-color);
+    border-radius: 10px;
+    bottom: 20px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    max-width: 300px;
+    min-width: 200px;
+    opacity: 0;
+    padding: 15px;
+    position: fixed;
+    right: 20px;
+    width: max-content;
+    z-index: 3;
+    transition: opacity var(--nav-time) ease;
+}
+.floating-message.show {
+    opacity: 1;
+}
+.floating-message.success {
+    background-color: var(--p-color);
+    border-color: var(--p-color);
+    color: var(--white-color);
+}
+.floating-message.error {
+    background-color: var(--alert-color);
+    border-color: var(--alert-color);
+    color: var(--white-color);
+}

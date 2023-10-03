@@ -1,0 +1,83 @@
+h1 {
+    font-size: var(--title-fze);
+}
+main {
+    background-color: var(--gray-color);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+form {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+}
+form label,
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+}
+form label {
+    font-weight: bold;
+    font-size: var(--normal-fze);
+    margin-bottom: 5px;
+}
+form input,
+form textarea {
+    border: 2px solid var(--gray-color);
+    border-radius: 10px;
+    font-size: var(--normal-fze);
+    outline: none;
+    padding: 10px;
+    transition: all var(--g-time) ease;
+}
+form input.wrong,
+form textarea.wrong {
+    color: var(--alert-color);
+    border-color: var(--alert-color);
+}
+form textarea {
+    min-height: 100px;
+    resize: none;
+}
+form .advanced-select .option-text-wrapper {
+    padding: 10px;
+}
+form .box-doble {
+    justify-content: space-between;
+}
+form .box {
+    width: 100%;
+}
+form .box:not(:first-child) {
+    margin-top: 15px;
+}
+form .box-doble .box {
+    width: calc(100% / 2 - 10px);
+}
+form .options {
+    margin-top: 30px !important;
+    justify-content: center;
+    align-items: center;
+}
+form .options button {
+    background-color: var(--p-color);
+    border: 2px solid var(--p-color);
+    border-radius: 10px;
+    color: var(--white-color);
+    display: block;
+    font-weight: bold;
+    font-size: var(--normal-fze);
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+}

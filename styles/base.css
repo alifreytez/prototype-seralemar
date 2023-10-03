@@ -1,0 +1,50 @@
+@import "fonts.css";
+@import "advanced-select.css";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --p-color: #0DC736;
+    --black-color: #000000;
+    --white-color: #FFFFFF;
+    --gray-color: #EBEBEC;
+    --letter-color: #333333;
+    --alert-color: #FF5050;
+    --shadow-color: rgba(0,0,0,.15);
+    --header-height: 100px;
+    
+    --font-family: "Titillium Web";
+    --font-size: 15px;
+    --title-fze: 1.5rem;
+    --subtitle-fze: 1.3rem;
+    --giant-fze: 2rem;
+    --normal-fze: 1.1rem;
+    --short-fze: 0.8rem;
+
+    --g-time: .3s;
+    --nav-time: .5s;
+}
+html {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+}
+input, label, textarea, button {
+    font-family: inherit;
+    font-size: inherit;
+}
+button {
+    cursor: pointer;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    position:relative
+}

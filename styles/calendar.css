@@ -1,0 +1,431 @@
+.content-header {
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.calendar-options {
+    align-items: center;
+    justify-content: center;
+}
+.calendar-options p {
+    margin: 0 20px;
+    font-size: var(--subtitle-fze);
+    font-weight: bold;
+}
+.calendar-options button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: all var(--g-time) ease;
+}
+.calendar-options button:hover {
+    color: var(--p-color);
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+.day-wrapper {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    justify-content: center;
+    min-width: 185px;
+    padding: 20px;
+}
+.day-text {
+    align-items: center;
+    border: 1px solid var(--p-color);
+    border-radius: 50px;
+    font-size: var(--subtitle-fze);
+    font-weight: 600;
+    height: 40px;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    width: 40px;
+}
+.day-info {    
+    width: 100%;
+}
+.day-notice {
+    line-height: 1;
+    justify-content: center;
+}
+.day-notice:not(:first-child) {
+    margin-top: 10px;
+}
+.day-notice i {
+    display: block;
+    width: 20px;
+    align-items: center;
+}
+.day-notice .lore {
+    margin-right: 5px;
+}
+.day-wrapper .see-detail {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--gray-color);
+    display: block;
+    font-weight: 700;
+    margin-top: 15px;
+    outline: none;
+    padding-bottom: 2px;
+    text-transform: uppercase;
+}
+
+.reminder-list {
+    align-items: center;
+    background-color: rgba(0,0,0,.8);
+    border-top-left-radius: 10px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: calc(100vh - var(--header-height));
+    min-height: 100%;
+    opacity: 0;
+    overflow-y: auto;
+    padding: 50px;
+    position: absolute;    
+    right: 0;
+    transition: opacity var(--nav-time) ease;
+    top: 0;
+    width: calc(100% - 100px);
+    z-index: 2;
+}
+.reminder-list.display {
+    display: flex;
+}
+.reminder-list.show {
+    opacity: 1;
+}
+.reminder-list .btn-close-form {
+    background-color: transparent;
+    border: none;
+    color: var(--alert-color);
+    font-size: var(--subtitle-fze);
+    font-weight: bold;
+    line-height: 1;
+    outline: none;
+    position: absolute;
+    right: 10px;
+    text-transform: uppercase;
+    top: 10px;
+}
+.reminder-list .btn-close-form i {
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+.reminder-wrapper {
+    background-color: var(--white-color);
+    box-shadow: 0 5px 10px 5px var(--shadow-color);
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+}
+.reminder-wrapper h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.table-wrapper {
+    padding: 0;
+}
+.reminder-list th:first-child,
+.reminder-list td:first-child {
+    width: 44px;
+}
+.reminder-list th:nth-child(2),
+.reminder-list th:nth-child(2)
+.reminder-list th:nth-child(3),
+.reminder-list td:nth-child(3) {
+    min-width: 110px;
+}
+.reminder-list th:nth-child(4),
+.reminder-list td:nth-child(4) {
+    min-width: 300px;
+}
+.reminder-list th:nth-child(5),
+.reminder-list td:nth-child(5) {
+    min-width: 165px;
+}
+.reminder-list.admin table th:last-child,
+.reminder-list.admin table td:last-child {
+    min-width: auto;
+}
+
+
+.reminder-options {
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 0;
+}
+.reminder-options button {
+    background-color: var(--white-color);
+    border: none;
+    border-radius: 10px;
+    display: block;
+    font-size: var(--subtitle-fze);
+    padding: 15px;
+    outline: none;
+    width: 60px;
+    text-align: center;
+    transition: all var(--g-time) ease;
+}
+.reminder-options button:not([id="delete-all-rows"]):hover {
+    background-color: var(--p-color);
+    color: var(--white-color);
+}
+.reminder-options button:not(:first-child) {
+    margin-left: 15px;
+}
+
+.content-header-form {
+    margin-bottom: 15px;
+    justify-content: flex-end;
+}
+.content-header-form-option {
+    background-color: var(--gray-color);
+}
+
+.top-lateral {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.top-lateral-option {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 10px;
+    width: 180px;
+    margin-right: 15px;
+}
+.top-lateral-option:not(:first-child) {
+    margin-left: 15px;
+}
+.top-lateral-option input {
+    border: 2px solid var(--gray-color);
+    border-radius: 10px;
+    color: var(--letter-color);
+    font-size: var(--normal-fze);
+    display: block;
+    padding: 5px 10px;
+    outline: none;
+    width: 100%;
+    transition: all var(--g-time) ease;
+}
+.top-lateral-option input:focus {
+    border-color: var(--letter-color);
+}
+.top-lateral-option label {
+    display: block;
+    font-size: var(--short-fze);
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.reminder-list-header {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.option-text-wrapper {
+    background-color: var(--white-color);
+}
+
+.pagination button:not(.pagination-points, .actual),
+.pagination button:not(.pagination-points, .actual):hover {
+    border-color: var(--gray-color) !important;
+}
+
+.modal-day {
+    align-items: center;
+    background-color: rgba(0,0,0,.8);
+    border-top-left-radius: 10px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: calc(100vh - var(--header-height));
+    min-height: 100%;
+    opacity: 0;
+    overflow-y: auto;
+    padding: 50px;
+    position: absolute;    
+    right: 0;
+    transition: opacity var(--nav-time) ease;
+    top: 0;
+    width: calc(100% - 100px);
+    z-index: 2;
+}
+.modal-day.display {
+    display: flex;
+}
+.modal-day.show {
+    opacity: 1;
+}
+.modal-day .btn-close-form {
+    background-color: transparent;
+    border: none;
+    color: var(--alert-color);
+    font-size: var(--subtitle-fze);
+    font-weight: bold;
+    line-height: 1;
+    outline: none;
+    position: absolute;
+    right: 10px;
+    text-transform: uppercase;
+    top: 10px;
+}
+.modal-day .btn-close-form i {
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+.modal-day-wrapper {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 5px 10px 5px var(--shadow-color);
+    padding: 30px
+}
+.modal-day-wrapper h3 {
+    font-size: var(--subtitle-fze);
+    margin-bottom: 15px;
+}
+.modal-collection-tables-list {
+    margin-bottom: 30px;
+}
+.modal-collection-tables-list th:first-child,
+.modal-collection-tables-list td:first-child,
+.modal-collection-tables-list th:nth-child(2),
+.modal-collection-tables-list td:nth-child(2),
+.modal-collection-tables-list th:nth-child(3),
+.modal-collection-tables-list td:nth-child(3) {
+    min-width: 120px !important;
+}
+.modal-collection-tables-list th:nth-child(4),
+.modal-collection-tables-list td:nth-child(4),
+.modal-collection-tables-list th:nth-child(5),
+.modal-collection-tables-list td:nth-child(5),
+.modal-collection-tables-list th:nth-child(6),
+.modal-collection-tables-list td:nth-child(6) {
+    min-width: 110px !important;
+}
+.modal-collection-tables-list th:nth-child(7),
+.modal-collection-tables-list td:nth-child(7),
+.modal-collection-tables-list th:nth-child(8),
+.modal-collection-tables-list td:nth-child(8) {
+    min-width: 160px !important;
+}
+.modal-collection-tables-list th:last-child,
+.modal-collection-tables-list td:last-child {
+    min-width: 180px !important;
+}
+
+.modal-reminders-list.hidden {
+    display: none;
+}
+.modal-reminders-list th:first-child,
+.modal-reminders-list td:first-child,
+.modal-reminders-list th:nth-child(2),
+.modal-reminders-list td:nth-child(2) {
+    min-width: 120px !important;
+    width: auto;
+}
+.modal-reminders-list th:nth-child(3),
+.modal-reminders-list td:nth-child(3) {
+    min-width: 200px !important;
+}
+.modal-reminders-list th:last-child,
+.modal-reminders-list td:last-child {
+    min-width: 165px !important;
+}
+
+
+
+@media (max-width: 1415px) {
+    .calendar-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+@media (max-width: 1205px) {
+    .calendar-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 985px) {
+    .calendar-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 695px) {
+    .calendar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 450px) {
+    .calendar-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .reminder-list,
+    .modal-day {
+        height: calc(100vh - 80px);
+        width: calc(100% - 80px);
+    }
+}
+@media (max-width: 900px) {
+    .content-header-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+    }
+    .top-lateral {
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media (max-width: 670px) {
+    .table-options {
+        margin-left: 0 !important;
+    }
+}
+@media (max-width: 800px) {
+    .reminder-list,
+    .modal-day {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+@media (max-width: 500px) {
+    .content-header {
+        justify-content: center;
+    }
+    .top-lateral-option,
+    .reminder-options {
+        margin-right: 0;
+        width: 100%
+    }
+    .reminder-options {
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    .reminder-list {
+        padding: 50px 30px;
+    }
+    
+    .content-header-form {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 400px) {
+    .reminder-list {
+        padding: 50px 20px;
+    }
+}

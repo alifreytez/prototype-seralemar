@@ -1,0 +1,187 @@
+h1 > span {
+    display: block;
+    width: 100%;
+}
+h1 button {
+    background-color: transparent;
+    border: none;
+    display: block;
+    font-size: var(--title-fze);
+    font-weight: 600;
+    outline: none;
+    text-align: left;
+    text-transform: uppercase;
+    width: 100%;
+}
+h1 button i {
+    color: var(--p-color);
+    transition: color var(--g-time) ease;
+}
+h1 button:hover i {
+    color: var(--letter-color);
+    transition: color var(--g-time) ease;
+}
+h1 button span {
+    color: var(--letter-color);
+    margin-left: 15px;
+}
+
+
+.table-wrapper th:first-child,
+.table-wrapper td:first-child {
+    width: 44px;
+}
+.table-wrapper.seller th:nth-child(2),
+.table-wrapper.seller td:nth-child(2),
+.table-wrapper.admin th:nth-child(2),
+.table-wrapper.admin td:nth-child(2) {
+    min-width: 115px;
+}
+.table-wrapper.admin th:nth-child(3),
+.table-wrapper.admin td:nth-child(3) {
+    min-width: 115px;
+}
+.table-wrapper.seller th:nth-child(3),
+.table-wrapper.seller td:nth-child(3),
+.table-wrapper.admin th:nth-child(4),
+.table-wrapper.admin td:nth-child(4) {
+    min-width: 130px;
+}
+
+.table-wrapper.seller th:nth-child(4),
+.table-wrapper.seller td:nth-child(4),
+.table-wrapper.seller th:nth-child(5),
+.table-wrapper.seller td:nth-child(5),
+.table-wrapper.seller th:nth-child(6),
+.table-wrapper.seller td:nth-child(6),
+.table-wrapper.seller th:nth-child(7),
+.table-wrapper.seller td:nth-child(7),
+.table-wrapper.admin th:nth-child(5),
+.table-wrapper.admin td:nth-child(5),
+.table-wrapper.admin th:nth-child(6),
+.table-wrapper.admin td:nth-child(6),
+.table-wrapper.admin th:nth-child(7),
+.table-wrapper.admin td:nth-child(7),
+.table-wrapper.admin th:nth-child(8),
+.table-wrapper.admin td:nth-child(8) {
+    min-width: 115px;
+}
+.table-wrapper.seller th:nth-child(8),
+.table-wrapper.seller td:nth-child(8),
+.table-wrapper.seller th:nth-child(9),
+.table-wrapper.seller td:nth-child(9),
+.table-wrapper.admin th:nth-child(9),
+.table-wrapper.admin td:nth-child(9),
+.table-wrapper.admin th:nth-child(10),
+.table-wrapper.admin td:nth-child(10) {
+    min-width: 130px;
+}
+.table-wrapper.seller th:nth-child(10),
+.table-wrapper.seller td:nth-child(10),
+.table-wrapper.admin th:nth-child(11),
+.table-wrapper.admin td:nth-child(11) {
+    min-width: 171px;
+}
+.table-wrapper table th:last-child,
+.table-wrapper table td:last-child {
+    min-width: auto;
+}
+.table-wrapper.admin th:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.table-wrapper.admin th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.table-wrapper.admin table td:last-child {
+    justify-content: space-around;
+}
+.table-wrapper.admin table button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: color var(--g-time) ease;
+}
+.table-wrapper.admin table tbody td:last-child button:last-child {
+    margin-left: 10px;
+}
+.table-wrapper.admin table button:hover {
+    color: var(--p-color);
+
+}
+
+.first .box {
+    margin-top: 0 !important;
+}
+
+
+@media (max-width: 1400px) {
+    h1,
+    .content-header-form {
+        width: 100%;
+    }
+    h1 {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .content-header-form {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 15px;
+    }
+
+    .content-header-form-option {
+        width: auto;
+        margin-left: 0 !important;
+    }
+}
+@media (max-width: 1100px) {
+    .content-header-form {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 750px) {
+    .content-header-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 670px) {
+    .pagination {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    .mayor-options .table-options {
+        margin-top: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .content {
+        padding: 30px;
+    }
+    .content-header-form {
+        grid-template-columns: 1fr;
+    }
+    h1 span,
+    h1 button {
+        text-align: center;
+        width: 100%
+    }
+    h1 button {
+        margin-left: 0;
+    }
+    h1 button::before {
+        display: none;
+    }
+    .first .box:not(:first-child) {
+        margin-top: 15px !important;
+    }
+}
+@media (max-width: 400px) {
+    .content {
+        padding: 20px;
+    }
+}

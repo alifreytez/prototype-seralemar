@@ -1,0 +1,38 @@
+.names .box {
+    margin-top: 0 !important;
+}
+
+.table-wrapper th:first-child,
+.table-wrapper td:first-child {
+    width: 44px;
+}
+.table-wrapper th:nth-child(2),
+.table-wrapper td:nth-child(2),
+.table-wrapper th:nth-child(3),
+.table-wrapper td:nth-child(3),
+.table-wrapper th:nth-child(4),
+.table-wrapper td:nth-child(4),
+.table-wrapper th:nth-child(5),
+.table-wrapper td:nth-child(5) {
+    min-width: 150px;
+}
+.table-wrapper th:nth-child(6),
+.table-wrapper td:nth-child(6) {
+    min-width: 180px;
+}
+.table-wrapper th:nth-child(7),
+.table-wrapper td:nth-child(7),
+.table-wrapper th:nth-child(8),
+.table-wrapper td:nth-child(8) {
+    min-width: 140px;
+}
+.table-wrapper th:nth-child(9),
+.table-wrapper td:nth-child(9),
+.table-wrapper th:nth-child(10),
+.table-wrapper td:nth-child(10) {
+    min-width: 200px;
+}
+.table-wrapper.admin table th:last-child,
+.table-wrapper.admin table td:last-child {
+    min-width: auto;
+}

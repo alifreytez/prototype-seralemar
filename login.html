@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/css/fontawesome.css">
+    <link rel="stylesheet" href="styles/css/brands.css">
+    <link rel="stylesheet" href="styles/css/solid.css">
+    <link rel="stylesheet" href="styles/css/regular.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/floating-message.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <!-- Scripts -->
+    <script src="scripts/login.js" type="module"></script>
+    <title>UCLA Prototype | Autenticación</title>
+</head>
+<body>
+    <main class="flex-wrap">
+        <section id="content" class="content">
+            <h1>Inicia sesión</h1>
+            <form method="post" id="login-form">
+                <div class="box">
+                    <label for="">Usuario</label>
+                    <input type="text" name="user-id" placeholder="Ingresa un usuario" autocomplete="off">
+                </div>
+                <div class="box">
+                    <label for="">Contraseña</label>
+                    <input type="password" name="password" placeholder="Ingresa una contraseña" autocomplete="off">
+                </div>
+                <div class="box flex-wrap options">
+                    <button type="submit" id="submit-form">Entrar</button>
+                </div>
+            </form>
+        </section>
+        <div id="floating-message"></div>
+    </main>
+</body>
+</html>

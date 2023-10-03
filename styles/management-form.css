@@ -1,0 +1,149 @@
+.management-form {
+    align-items: center;
+    background-color: rgba(0,0,0,.8);
+    border-top-left-radius: 10px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: calc(100vh - var(--header-height));
+    min-height: 100%;
+    opacity: 0;
+    overflow-y: auto;
+    padding: 50px;
+    position: absolute;    
+    right: 0;
+    transition: opacity var(--nav-time) ease;
+    top: 0;
+    width: calc(100% - 100px);
+    z-index: 2;
+}
+.management-form.display {
+    display: flex;
+}
+.management-form.show {
+    opacity: 1;
+}
+.management-form .btn-close-form {
+    background-color: transparent;
+    border: none;
+    color: var(--alert-color);
+    font-size: var(--subtitle-fze);
+    font-weight: bold;
+    line-height: 1;
+    outline: none;
+    position: absolute;
+    right: 10px;
+    text-transform: uppercase;
+    top: 10px;
+}
+.management-form .btn-close-form i {
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+.management-wrapper {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 0 5px 10px 5px var(--shadow-color);
+}
+.management-wrapper .inside-wrapper {
+    padding: 30px;
+}
+.management-wrapper h2 {
+    background-color: var(--p-color);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: var(--white-color);
+    font-size: var(--title-fze);
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 30px;
+}
+.management-wrapper label,
+.management-wrapper input,
+.management-wrapper textarea {
+    display: block;
+    width: 100%;
+}
+.management-wrapper label {
+    font-weight: bold;
+    font-size: var(--normal-fze);
+    margin-bottom: 5px;
+}
+.management-wrapper input,
+.management-wrapper textarea {
+    border: 2px solid var(--gray-color);
+    border-radius: 10px;
+    font-size: var(--normal-fze);
+    outline: none;
+    padding: 10px;
+    transition: all var(--g-time) ease;
+}
+.management-wrapper input.wrong,
+.management-wrapper textarea.wrong {
+    color: var(--alert-color);
+    border-color: var(--alert-color);
+}
+.management-wrapper textarea {
+    min-height: 100px;
+    resize: none;
+}
+.management-wrapper .advanced-select .option-text-wrapper {
+    padding: 10px;
+}
+.management-wrapper .box-doble {
+    justify-content: space-between;
+}
+.management-wrapper .box {
+    width: 100%;
+}
+.management-wrapper .box:not(.inside-wrapper > .box:first-child) {
+    margin-top: 15px;
+}
+.management-wrapper .box-doble .box {
+    width: calc(100% / 2 - 10px);
+}
+.management-wrapper .options {
+    margin-top: 30px !important;
+    justify-content: center;
+    align-items: center;
+}
+.management-wrapper .options button {
+    background-color: var(--p-color);
+    border: 2px solid var(--p-color);
+    border-radius: 10px;
+    color: var(--white-color);
+    display: block;
+    font-weight: bold;
+    font-size: var(--normal-fze);
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .management-form {
+        height: calc(100vh - 80px);
+        width: calc(100% - 80px);
+    }
+}
+@media (max-width: 800px) {
+    .management-form {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+@media (max-width: 500px) {
+    .management-form {
+        padding: 50px 30px;
+    }
+    .management-wrapper .box-doble .box {
+        width: 100%;
+    }
+}
+@media (max-width: 400px) {
+    .management-form {
+        padding: 50px 20px;
+    }
+}

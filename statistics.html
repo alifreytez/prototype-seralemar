@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/css/fontawesome.css">
+    <link rel="stylesheet" href="styles/css/brands.css">
+    <link rel="stylesheet" href="styles/css/solid.css">
+    <link rel="stylesheet" href="styles/css/regular.css">
+    <link rel="stylesheet" href="styles/floating-message.css">
+    <link rel="stylesheet" href="styles/table-page.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/statistics.css">
+    <!-- Scripts -->
+    <script src="scripts/general.js" type="module"></script>
+    <script src="scripts/statistics.js" type="module"></script>
+    <title>UCLA Prototype | Resumen</title>
+</head>
+<body>
+    <header>
+        <div class="page-header-wrapper flex-wrap">
+            <div class="btn-open-menu-wrapper flex-wrap"><button type="button" id="btn-open-menu"><i class="fa-solid fa-bars"></i></button></div>
+            <div class="page-header-options-wrapper flex-wrap">
+                <div class="btn-notification-wrapper">
+                    <button type="button" id="btn-open-close-notification" class="btn-notification"><i class="fa-solid fa-bell"></i></button>
+                    <div id="notification-wrapper" class="notification-wrapper"></div>
+                </div>
+                <div class="user-options-wrapper flex-wrap">
+                    <button type="button" id="btn-perfil"><i class="fa-solid fa-circle-user"></i></button>
+                    <p><span id="user-name" class="user-name"></span><span id="user-role" class="user-role"></span></p>
+                    <a href="logout.html" id="btn-logout" class="flex-wrap btn-logout"><i class="fa-solid fa-sign-out"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="flex-wrap">
+        <nav id="nav-menu" class="page-nav flex-wrap hide"></nav>
+        <section id="content" class="content">
+            <div class="flex-wrap content-header">
+                <h1>Resumen</h1>
+            </div>
+            <div id="resume" class="resume">
+            </div>
+            <div class="table-wrapper">
+                <div class="table-wrapper-in">
+                    <table id="resume-table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Cédula</th>
+                                <th>Deudas generadas</th>
+                                <th>Deudas cobradas</th>
+                                <th>Deudas pendientes</th>
+                                <th>Deudas anuladas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <div id="modal-notification" class="modal-notification">
+            <button type="button" id="close-modal-notification" class="btn-close-form"><i class="fa-solid fa-x"></i>Cerrar</button>
+            <div class="modal-notification-wrapper">
+                <div class="modal-notification-wrapper-in">
+                    <div id="modal-notification-change-cc" class="modal-notification-change-cc"></div>
+                    <div id="modal-notification-reminder" class="modal-notification-reminder"></div>
+                </div>
+            </div>
+        </div>
+        <div id="floating-message"></div>
+    </main>
+</body>
+</html>
